@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Send-email</title>
+	<style type="text/css">
+		.Bo{
+		margin:2px;	
+		
+		}
+		.Fo{
+background-color:gold;
+padding:4px;
+		}
+		.T{
+background-color:black;
+height:25px;
+width:235px;
+color: white;
+font-size:20px;
+		}
+		.F{
+background-color:black;
+height:25px;
+width:235px;
+color: white;
+font-size:20px;
+		}
+		.S{
+background-color:black;
+height:25px;
+width:235px;
+color: white;
+font-size:20px;
+		}
+		.M{
+background-color:white;
+color: black;
+font-size:18px;
+		}
+		.Se{
+background-color:blue;
+height:25px;
+width:110px;
+color:gray;
+font-size:18px;
+		}
+	</style>
+</head>
+<body class="Bo">
+<form action="send.php" method="POST" class="Fo">
+To:<input type="text" name="to" class="T"><br><br>
+From:<input type="text" name="from" class="F"><br><br>
+Subject:<input type="" name="" class="S"><br><br>
+Message:<br><textarea name="message" class="M" cols="30" rows="8" placeholder="What is your mind?..."></textarea><br><br>
+<input type="submit" name="submit" value="Send-email" class="Se">	
+</form>
+<?php
+
+$to=$_POST["to"];
+$from=$_POST["form"];
+$subject=$_POST["subject"];
+$message=$_POST["message"];
+
+$body="his is an Automted E-Mail Sent From www.mailforfree.tk. Please Do not reply if it is if no use.\n\n $message";
+
+$headers ="From= $from";
+mail($to,$subject,$body,$headers);
+
+echo"Your Message Has Been Sent Successfully!!.";
+?>
+</body>
+</html>

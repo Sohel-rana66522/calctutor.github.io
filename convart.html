@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>convart.</title>
+	<link rel="stylesheet" type="text/css" hrf="css/bootstrap.min.css">
+	<script type="text/javascript">
+		function convart(z) {
+		 var x = document.getElementById('height').value;
+		 var y = document.getElementById('width').value;
+		 var z = (x*y) / 435.6 ;
+         document.getElementById("d").value=z;
+		}
+		  function c(val){
+          document.getElementById("d").value=val;
+          document.getElementById('height').value=val;
+		  document.getElementById('width').value=val;
+        }
+        function con(z) {
+		 var x = document.getElementById('area').value;
+		 var y = document.getElementById('length').value;
+		 var z =(x*435.6)/y;
+         document.getElementById("dis").value=z;
+		}
+		  function g(val){
+          document.getElementById("dis").value=val;
+          document.getElementById('area').value=val;
+		  document.getElementById('length').value=val;
+        }
+	</script>
+	<style type="text/css">
+		body{
+			height:510px ;
+			width:350px;
+			margin:0px;
+			margin-top:0px;
+			margin-left:0px;
+		}
+		.bo{
+			height: 510px;
+			widows: 350px;
+			
+		}
+		.hedder{
+          padding: 4px;
+          width: 350px;
+          margin: 1px;
+          margin-top: 0px;
+          text-align: center;
+          background-color:green;
+		}
+		.main{
+         background-color: gold;
+         padding: 4px;
+          width: 350px;
+          margin:1px;
+          margin-top: 0px;
+          height: 300px;
+		}
+		.footer{
+          width: 360px;
+          height: 100px;
+          background-color: green;
+          
+          text-align: center;
+		}
+		.read{
+			text-align: center;
+		}
+		.text{
+			height:40px;
+			width: 160px;
+			font-size: 15px;
+		}
+		.btn{
+			height: 30px;
+			width: 100px;
+			border-bottom: 2px ;
+            background-color: gray;
+		}
+		.button{
+			border-bottom: 2px ;
+            height: 25px;
+            width: 50px;
+		}
+		#height{
+			height: 25px;
+			width: 150px;
+			font-size: 15px;
+		}
+		#width{
+			height: 25px;
+			width: 150px;
+			font-size: 15px;
+		}
+		#area{
+			height: 25px;
+			width: 150px;
+			font-size: 15px;
+		}
+		#length{
+			height: 25px;
+			width: 150px;
+			font-size: 15px;
+		}
+		h3{
+			margin-top: 0px;
+			
+		}
+		p{
+			font-style: italic;
+			margin-top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="bo">
+	<div class="hedder">
+   <marquee> <h1>Convarter</h1> </marquee>
+	</div>
+	<div class="main">
+	 <table>
+	 	<tr>
+	 	 <td> <div >
+    	  <input type="text" name="height" id="height" placeholder="height..."><br><br>
+    	  <input type="text" name="width" id="width" placeholder="width..."><br><br>
+         </div></td>
+         <td><div class="display">
+        	<input type="text" class="text" placeholder="Display Area " id="d">
+         </div></td>
+        </tr>
+        <tr>
+          <td><button class="btn" onclick="convart()">Convart</button></td>
+    	  <td><input type="button" class="button" value="Clear"onclick='c("")'></td>
+        </tr>
+      </table><hr>
+       <table>
+	 	<tr>
+	 	 <td> <div >
+    	  <input type="text" name="area" id="area" placeholder="Area..."><br><br>
+    	  <input type="text" name="width/height" id="length" placeholder="width/height..."><br><br>
+         </div></td>
+         <td><div class="display">
+        	<input type="text" class="text" placeholder="Display Area " id="dis">
+         </div></td>
+        </tr>
+        <tr>
+          <td><button class="btn" onclick="con()">Convart</button></td>
+    	  <td><input type="button" class="button" value="Clear"onclick='g("")'></td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer">
+    	<p>@ Don't stop when you are tired & stop when you are finished</p>
+    </div>
+    </div>
+</body>
+</html>
